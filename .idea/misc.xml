@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../../layout/compose-model-1614410211094.xml" value="0.9494584837545126" />
+        <entry key="../../../../../layout/compose-model-1614412179131.xml" value="1.0" />
+        <entry key="../../../../../layout/compose-model-1614743815424.xml" value="0.3627946127946128" />
+        <entry key="../../../../../layout/compose-model-1614754700972.xml" value="0.32575757575757575" />
+        <entry key="../../../../../layout/compose-model-1614755436746.xml" value="1.0" />
+        <entry key="../../../../../layout/compose-model-1614755523594.xml" value="0.32575757575757575" />
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3984375" />
+        <entry key="app/src/main/res/drawable/ic_icon_layout.xml" value="0.3984375" />
+        <entry key="app/src/main/res/drawable/ic_icon_sync.xml" value="0.3984375" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3984375" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

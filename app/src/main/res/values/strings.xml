@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ComposeCatalog</string>
+    <string name="home_item_layout">布局</string>
+    <string name="home_item_theme">主题</string>
+    <string name="home_item_sync">状态</string>
+</resources>
