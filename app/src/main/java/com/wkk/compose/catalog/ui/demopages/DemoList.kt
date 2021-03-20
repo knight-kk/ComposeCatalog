@@ -25,9 +25,8 @@ fun DemoList(navigationViewModel: NavigationViewModel, data: DemoCategory) {
                 onNavigationClick = navigationViewModel::onBack
             )
         }
-    ) {
-
-        LazyColumn {
+    ) { paddingValues ->
+        LazyColumn(modifier = Modifier.padding(paddingValues)) {
             items(data.demos) { demo ->
                 Text(
                     text = demo.itemData.title,
