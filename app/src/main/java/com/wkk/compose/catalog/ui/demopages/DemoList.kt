@@ -14,7 +14,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.wkk.compose.catalog.data.DemoCategory
 import com.wkk.compose.catalog.ui.NavigationViewModel
-import com.wkk.compose.catalog.ui.theme.AppTopBar
+import com.wkk.compose.catalog.ui.widget.AppTopBar
 
 @Composable
 fun DemoList(navigationViewModel: NavigationViewModel, data: DemoCategory) {

@@ -1,4 +1,4 @@
-package com.wkk.compose.catalog.ui.theme
+package com.wkk.compose.catalog.ui.widget
 
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton

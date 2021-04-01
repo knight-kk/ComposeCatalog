@@ -3,7 +3,11 @@ package com.wkk.compose.catalog.ui.demopages
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.foundation.lazy.items
@@ -20,6 +24,7 @@ import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.wkk.compose.catalog.R
+import com.wkk.compose.catalog.data.Demo
 import com.wkk.compose.catalog.data.DemoCategory
 import com.wkk.compose.catalog.data.HomeDemoModule
 import com.wkk.compose.catalog.data.ItemData
@@ -41,6 +46,12 @@ val homeDemoModule = HomeDemoModule(
 @ExperimentalFoundationApi
 @Composable
 fun Home(navigator: NavigationViewModel, data: HomeDemoModule) {
+    Home( data, navigator::navigateTo)
+}
+
+@ExperimentalFoundationApi
+@Composable
+fun Home(data: HomeDemoModule, onItemClick: (demo: Demo) -> Unit) {
     Scaffold(
         topBar = {
             TopAppBar(title = { Text(text = stringResource(id = R.string.app_name)) })
@@ -50,14 +61,14 @@ fun Home(navigator: NavigationViewModel, data: HomeDemoModule) {
         LazyVerticalGrid(cells = GridCells.Fixed(count), contentPadding = PaddingValues(10.dp)) {
             items(data.demos) { demo ->
                 Box(Modifier.padding(10.dp), contentAlignment = Alignment.Center) {
-                    HomeItem(data = demo.itemData, modifier = Modifier.fillMaxWidth()) {
-                        navigator.navigateTo(demo)
-                    }
+                    HomeItem(
+                        data = demo.itemData,
+                        modifier = Modifier.fillMaxWidth()
+                    ) { onItemClick(demo) }
                 }
             }
         }
     }
-
 }
 
 

@@ -10,10 +10,10 @@ import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.compose.rememberNavController
 import com.wkk.compose.catalog.data.ComposableDemo
 import com.wkk.compose.catalog.data.DemoCategory
 import com.wkk.compose.catalog.data.HomeDemoModule
+import com.wkk.compose.catalog.ui.App
 import com.wkk.compose.catalog.ui.NavigationViewModel
 import com.wkk.compose.catalog.ui.demopages.DemoContent
 import com.wkk.compose.catalog.ui.demopages.DemoList
@@ -31,37 +31,24 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeCatalogTheme {
-                Surface(color = MaterialTheme.colors.background) {
-                    val nav= rememberNavController()
-                    nav.backStack
-
-//                    val navigator = remember { Navigator(onBackPressedDispatcher, homeDemoModule) }
-                    Crossfade(navigationViewModel.currentDemo) { demo ->
-                        when (demo) {
-                            is HomeDemoModule -> Home(navigationViewModel, demo)
-                            is DemoCategory -> DemoList(navigationViewModel, demo)
-                            is ComposableDemo -> DemoContent(navigationViewModel, demo)
-                        }
-                    }
-                }
+                App(navigationViewModel = navigationViewModel)
             }
         }
     }
-
 
     override fun onBackPressed() {
         if (!navigationViewModel.onBack()) {
             super.onBackPressed()
         }
-
     }
 }
 
 
+@ExperimentalFoundationApi
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     ComposeCatalogTheme {
-
+        Home(data = homeDemoModule) {}
     }
 }
