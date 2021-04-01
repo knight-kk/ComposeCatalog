@@ -1,5 +1,5 @@
 # ComposeCatalog
- ![license](https://img.shields.io/badge/License-Apache-blue)
+ ![license](https://img.shields.io/badge/License-Apache-blue) &emsp; ![Workflow result](https://github.com/wkk-knight/ComposeCatalog/workflows/build/badge.svg)
 
 
 
