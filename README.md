@@ -1,5 +1,14 @@
 # ComposeCatalog
-Compose demo 
+ ![license](https://img.shields.io/badge/License-Apache-blue)
+
+
+
+# 项目介绍
+
+Jetpack Compose 使用演示
+
+
+
 
 
 # License
@@ -17,4 +26,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
- ```
+```

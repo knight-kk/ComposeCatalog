@@ -1,3 +1,18 @@
+/*
+ * Copyright 2021 wkk-knight
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.wkk.compose.catalog.ui.demopages.layout
 
 import androidx.compose.foundation.background
@@ -13,7 +28,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.wkk.compose.catalog.ui.widget.Caption
 
-
 @Composable
 fun BoxDemo() {
     Column {
@@ -24,9 +38,7 @@ fun BoxDemo() {
         Caption("Box Align 演示", "对单个child 设置对齐方式")
         BoxAlignDemo()
     }
-
 }
-
 
 @Composable
 fun BoxSimpleDemo() {
@@ -48,7 +60,6 @@ fun BoxSimpleDemo() {
     }
 }
 
-
 @Composable
 fun BoxAlignDemo() {
     Box(
@@ -60,7 +71,7 @@ fun BoxAlignDemo() {
             modifier = Modifier
                 .size(30.dp)
                 .background(Color.Blue)
-                //设置此child 在Box的位置
+                // 设置此child 在Box的位置
                 .align(Alignment.TopStart)
         )
         Box(
@@ -92,7 +103,6 @@ fun BoxContentAlignmentDemo() {
         )
     }
 }
-
 
 @Preview
 @Composable

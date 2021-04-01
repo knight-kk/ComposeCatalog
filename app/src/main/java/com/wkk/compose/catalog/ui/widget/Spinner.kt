@@ -1,3 +1,18 @@
+/*
+ * Copyright 2021 wkk-knight
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.wkk.compose.catalog.ui.widget
 
 import androidx.compose.foundation.clickable
@@ -34,7 +49,6 @@ fun Spinner(
     }
 }
 
-
 /**
  * [array] 填充列表的数据
  *
@@ -51,21 +65,25 @@ fun <T> Spinner(
     var expanded by remember { mutableStateOf(false) }
     var selectedIndex by remember { mutableStateOf(0) }
     Box(modifier = Modifier.wrapContentSize()) {
-        Row(modifier = Modifier
-            .clickable { expanded = true }
-            .padding(10.dp)) {
+        Row(
+            modifier = Modifier
+                .clickable { expanded = true }
+                .padding(10.dp)
+        ) {
             itemContent(array[selectedIndex])
             Icon(Icons.Default.ArrowDropDown, contentDescription = "ArrowDropDown")
         }
         DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             array.forEachIndexed { index, item ->
-                DropdownMenuItem(onClick = {
-                    selectedIndex = index
-                    //函数返回值控制点击后是否收起
-                    if (onItemSelected(index, item)) {
-                        expanded = false
+                DropdownMenuItem(
+                    onClick = {
+                        selectedIndex = index
+                        // 函数返回值控制点击后是否收起
+                        if (onItemSelected(index, item)) {
+                            expanded = false
+                        }
                     }
-                }) {
+                ) {
                     itemContent(item)
                 }
             }
@@ -73,11 +91,6 @@ fun <T> Spinner(
     }
 }
 
-
 @Composable
 fun ColumnDemoPreview() {
 }
-
-
-
-
