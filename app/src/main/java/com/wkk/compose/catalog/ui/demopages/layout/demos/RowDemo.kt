@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.wkk.compose.catalog.ui.demopages.layout
+package com.wkk.compose.catalog.ui.demopages.layout.demos
 
 import androidx.compose.runtime.Composable
 

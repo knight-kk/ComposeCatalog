@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.wkk.compose.catalog.ui.demopages.layout
+package com.wkk.compose.catalog.ui.demopages.layout.demos
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -21,12 +21,10 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
-import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -46,7 +44,7 @@ import com.wkk.compose.catalog.ui.widget.Spinner
 
 @Composable
 fun ColumnDemo() {
-    Column(Modifier.fillMaxSize()) {
+    Column {
         Caption("Column 简单演示")
         ColumnSimpleDemo()
         Caption("Column Arrangement 演示", "Arrangement 控制主轴上的对齐方式及 children 的间距")
@@ -151,12 +149,10 @@ private fun ColumnAlignment(horizontalAlignment: Alignment.Horizontal = Alignmen
     }
 }
 
-@Preview(showBackground = false, showSystemUi = true)
+@Preview(showBackground = true, showSystemUi = true)
 @Composable
 private fun ColumnDemoPreview() {
-    Scaffold {
-        ColumnDemo()
-    }
+    ColumnDemo()
 }
 
 val COLORS = arrayOf(Blue, Red, Orange)

@@ -19,6 +19,9 @@ import com.wkk.compose.catalog.R
 import com.wkk.compose.catalog.data.ComposableDemo
 import com.wkk.compose.catalog.data.DemoCategory
 import com.wkk.compose.catalog.data.ItemData
+import com.wkk.compose.catalog.ui.demopages.layout.demos.ColumnDemo
+import com.wkk.compose.catalog.ui.demopages.layout.demos.ConstraintLayoutDemo
+import com.wkk.compose.catalog.ui.demopages.layout.demos.ModifierDemo
 
 val layouts = DemoCategory(
     ItemData("布局", R.drawable.icon_layout),
@@ -26,5 +29,6 @@ val layouts = DemoCategory(
         ComposableDemo(ItemData("Modifier")) { ModifierDemo() },
         ComposableDemo(ItemData("Box")) { BoxDemo() },
         ComposableDemo(ItemData("Column")) { ColumnDemo() },
+        ComposableDemo(ItemData("ConstraintLayout")) { ConstraintLayoutDemo() },
     )
 )

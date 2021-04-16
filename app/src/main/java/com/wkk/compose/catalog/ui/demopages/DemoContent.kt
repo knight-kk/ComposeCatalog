@@ -15,8 +15,11 @@
  */
 package com.wkk.compose.catalog.ui.demopages
 
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Scaffold
+import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import com.wkk.compose.catalog.data.ComposableDemo
 import com.wkk.compose.catalog.ui.NavigationViewModel
 import com.wkk.compose.catalog.ui.widget.AppTopBar
@@ -32,6 +35,8 @@ fun DemoContent(navigationViewModel: NavigationViewModel, data: ComposableDemo) 
             )
         }
     ) {
-        data.content()
+        Surface(Modifier.fillMaxSize()) {
+            data.content()
+        }
     }
 }
