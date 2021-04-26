@@ -51,11 +51,7 @@ fun Caption(title: String, desc: String? = null) {
                     imageVector = ImageVector.vectorResource(id = R.drawable.ic_compose_logo),
                     contentDescription = "compose_logo"
                 )
-                Text(
-                    modifier = Modifier.padding(4.dp, 0.dp),
-                    text = title,
-                    style = MaterialTheme.typography.h6,
-                )
+                Title(title, Modifier.padding(4.dp, 0.dp))
             }
 
             Spacer(
@@ -73,14 +69,24 @@ fun Caption(title: String, desc: String? = null) {
         }
 
         if (!desc.isNullOrEmpty()) {
-            Text(
-                modifier = Modifier.padding(top = 6.dp),
-                text = desc,
-                style = MaterialTheme.typography.body2
-            )
+            SubTitle(desc, Modifier.padding(top = 6.dp))
         }
     }
 }
+
+@Composable
+fun Title(title: String, modifier: Modifier = Modifier) = Text(
+    modifier = modifier,
+    text = title,
+    style = MaterialTheme.typography.h6,
+)
+
+@Composable
+fun SubTitle(title: String, modifier: Modifier = Modifier) = Text(
+    modifier = modifier,
+    text = title,
+    style = MaterialTheme.typography.body2,
+)
 
 @Preview
 @Composable

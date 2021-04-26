@@ -24,6 +24,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 
+/**
+ * 约束布局
+ */
 @Composable
 fun ConstraintLayoutDemo() {
 

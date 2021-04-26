@@ -13,25 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.wkk.compose.catalog.ui.demopages
+package com.wkk.compose.catalog.ui.demopages.layout.demos
 
-import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
-import com.wkk.compose.catalog.data.ComposableDemo
-import com.wkk.compose.catalog.ui.NavigationViewModel
-import com.wkk.compose.catalog.ui.widget.AppTopBar
+
+/**
+ * 布局的约束
+ */
 
 @Composable
-fun DemoContent(navigationViewModel: NavigationViewModel, data: ComposableDemo) {
-
-    Scaffold(
-        topBar = {
-            AppTopBar(
-                title = data.itemData.title,
-                onNavigationClick = navigationViewModel::onBack
-            )
-        }
-    ) {
-        data.content()
-    }
+fun LayoutConstraintDemo() {
 }
