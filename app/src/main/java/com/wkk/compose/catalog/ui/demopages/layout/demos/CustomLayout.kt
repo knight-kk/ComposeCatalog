@@ -175,7 +175,7 @@ private fun MyRowV3(modifier: Modifier = Modifier, content: @Composable () -> Un
     val measurePolicy = MeasurePolicy { measurables, constraints ->
         // 记录children 已经占据的空间
         var childrenSpace = 0
-        val placeables = measurables.mapIndexed { index, child ->
+        val placeables = measurables.map { child ->
             val placeable = child.measure(
                 Constraints(
                     0,
