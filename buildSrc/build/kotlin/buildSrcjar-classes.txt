@@ -1,1 +1,0 @@
-D:\github\ComposeCatalog\buildSrc\build\classes\kotlin\main\VersonKt.class
