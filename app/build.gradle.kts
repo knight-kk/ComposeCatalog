@@ -32,6 +32,7 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+        freeCompilerArgs = listOf("-Xopt-in=kotlin.RequiresOptIn")
     }
     buildFeatures {
         compose = true
@@ -51,6 +52,7 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.compose.ui:ui:$CONPOSE_VERSION")
+    implementation("androidx.compose.ui:ui-util:$CONPOSE_VERSION")
     implementation("androidx.compose.material:material:$CONPOSE_VERSION")
     implementation("androidx.compose.ui:ui-tooling:$CONPOSE_VERSION")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")

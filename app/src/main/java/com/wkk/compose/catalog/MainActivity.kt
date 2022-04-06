@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         NavigationViewModel.Factory(homeDemoModule)
     }
 
-    @ExperimentalFoundationApi
+    @OptIn(ExperimentalFoundationApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
